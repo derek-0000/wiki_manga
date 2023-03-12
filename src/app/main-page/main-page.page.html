@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="start">Wiki Manga</ion-title>
+    <ion-button slot="end" [routerLink]="['/user-likes']">
+      <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-avatar slot="end" [routerLink]="['/user-info']">
+      <img
+        src="https://pbs.twimg.com/media/FqkH33nWYAEMsTn?format=png&name=small"
+        alt="User pfp"
+      />
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <app-manga-scroll [data]="data" title="Top" ></app-manga-scroll>
+
+</ion-content>
+
+<ng-template #hideManga> {{null}} </ng-template>

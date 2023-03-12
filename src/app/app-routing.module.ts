@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'main-page',
+    loadChildren: () => import('./main-page/main-page.module').then( m => m.MainPagePageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'user-likes',
+    loadChildren: () => import('./user-likes/user-likes.module').then( m => m.UserLikesPageModule)
+  },
+  {
+    path: 'user-info',
+    loadChildren: () => import('./user-info/user-info.module').then( m => m.UserInfoPageModule)
+  },
+  {
+    path: 'manga-info',
+    loadChildren: () => import('./manga-info/manga-info.module').then( m => m.MangaInfoPageModule)
+  },
 ];
 
 @NgModule({
