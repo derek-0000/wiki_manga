@@ -8,28 +8,34 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, Validators } from '@a
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  URL:string='http://192.168.137.212:3000/mangas/login'
+  URL:string='http://192.168.137.212:3000/login'
   li:any;
   data=''
   loginForm: FormGroup
 
   constructor(private router:Router, private http:HttpClient, public form:FormBuilder) {
     this.loginForm = this.form.group({
-      'email':new FormControl("", Validators.required),//validator es para no subir sin nada 
-      'password':new FormControl("", Validators.required)
+      'username':new FormControl("", Validators.required),//validator es para no subir sin nada 
+      'pass':new FormControl("", Validators.required)
     }) 
     
    }//httpclient es para 
-  logon(){
-
-    this.http.post(this.URL,this.logon).subscribe(Response=>{
-      this.li=Response;
+  async logon(){
+   
+    this.http.post(this.URL,this.loginForm.value).subscribe(Response=>{
+      this.li= Response;
       console.log(this.li)
-      //dato = this.loginForm.value
+      if (this.li.login == true){
+      this.router.navigate(['/main-page'])
+      }else{
+        console.log("Err")
+      }
+        
+      
+      //dato = this.loginForm.value  
+    })
 
   
-      
-    })
     
    console.log(this.loginForm.value)
     
