@@ -1,3 +1,27 @@
-<ion-content>
-  <div>Login</div>
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <div id="container">
+      <h1>Wiki Manga</h1>
+      <form [formGroup]="loginForm"> 
+        <ion-item fill="solid">
+          <ion-label position="floating">User</ion-label>
+          <ion-input formControlName="username" type="user"></ion-input>
+          <ion-note slot="helper">Enter a valid user</ion-note>
+          <ion-note slot="error">Invalid user</ion-note>
+        </ion-item>
+        <ion-item fill="solid">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input formControlName="pass" type="password"></ion-input>
+          <ion-note slot="helper">Enter a valid password</ion-note>
+          <ion-note slot="error">Invalid password</ion-note>
+        </ion-item>
+      </form>
+        <ion-button (click)='logon()'fill="outline">Login</ion-button>
+    </div>
+  </div>
+  <div>
+    <div class="background">
+      <img class="background" src="../../assets/background.png" alt="background">
+    </div>
+  </div>
 </ion-content>
