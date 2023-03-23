@@ -14,8 +14,8 @@ import { RouterModule } from '@angular/router';
 export class MangaScrollComponent  implements OnInit {
   @Input() data?:any[];
   @Input() title?:string;
-  
-  constructor() { 
+
+  constructor() {
 
   }
 

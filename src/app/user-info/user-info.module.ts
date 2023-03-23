@@ -8,11 +8,14 @@ import { UserInfoPageRoutingModule } from './user-info-routing.module';
 
 import { UserInfoPage } from './user-info.page';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    RouterModule,
     UserInfoPageRoutingModule
   ],
   declarations: [UserInfoPage]
