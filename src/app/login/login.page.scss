@@ -5,7 +5,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;
-    filter: brightness(90%);
+    filter: brightness(100%);
 }
 h1{
     font-size: 3rem;
@@ -17,9 +17,9 @@ h1{
     #container {
       text-align: center;
       height: 50vh;
-      width: 50vw;
+      width: 30vw;
       position: absolute;
-      right: 25%;
+      right: 35%;
       top: 50%;
       transform: translateY(-50%);
       background-color: rgba($color: #1d1d1d, $alpha: 1);
@@ -125,4 +125,7 @@ h1{
       filter: rightness(120%) saturate(200%);
     //   background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
     //  background-blend-mode: multiply;
+    }
+    ion-item>*{
+      margin-bottom: .5rem;
     }
