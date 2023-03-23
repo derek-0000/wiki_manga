@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./user-info/user-info.module').then( m => m.UserInfoPageModule)
   },
   {
-    path: 'manga-info',
+    path: 'manga-info/:id',
     loadChildren: () => import('./manga-info/manga-info.module').then( m => m.MangaInfoPageModule)
   },
 ];
