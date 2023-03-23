@@ -1,8 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title slot="start">Wiki Manga</ion-title>
+    <ion-title slot="start" [routerLink]="['/']">Wiki Manga</ion-title>
     <ion-button slot="end" [routerLink]="['/user-likes']">
       <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" [routerLink]="['/library']">
+      <ion-icon name="apps-outline"></ion-icon>
     </ion-button>
     <ion-avatar slot="end" [routerLink]="['/user-info']">
       <img
