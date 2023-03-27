@@ -15,7 +15,7 @@ import {HttpClientModule } from '@angular/common/http';
     FormsModule,
     IonicModule,
     SignupPageRoutingModule,
-    ReactiveFormsModule, // <-- Added this line so that we can use Reactive Forms
+    ReactiveFormsModule, // <-- Added to use Reactive Forms
     HttpClientModule
   ],
   declarations: [SignupPage]

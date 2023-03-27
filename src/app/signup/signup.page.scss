@@ -7,7 +7,7 @@ h1{
     }
     #container {
       text-align: center;
-      height: 50vh;
+      height: 80vh;
       width: 50vw;
       position: absolute;
       right: 25%;
@@ -98,6 +98,11 @@ h1{
       text-transform: none;
     }
     .signin{
+      --color:black;
+      --background:#8bec92;
+      
+    }
+    .login{
       --color:black;
       --background:#B0F2B4;
     }
