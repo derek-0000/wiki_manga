@@ -36,6 +36,12 @@ ion-button{
     display: flex;
     align-items: center;
 }
+ion-card-header{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}
 @media (max-width:1400px) {
     #container{
         width: 90vw;
