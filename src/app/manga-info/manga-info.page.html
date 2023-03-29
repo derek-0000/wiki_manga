@@ -7,14 +7,14 @@
       <ion-card-subtitle>{{manga.genre_manga}}</ion-card-subtitle>
       <ion-item>
         <ion-badge [color]="manga.status_manga == 'Finished' ? 'danger' : 'success'">{{manga.cap_manga}}</ion-badge>
-        Status {{manga.status_manga}}
+        Status: {{manga.status_manga}}
       </ion-item>
     </ion-card-header>
   
     <ion-card-content>
       <p>Debuted in: {{formatDate(manga.debut_manga)}}</p>
       <p>Made by: {{manga.name_author}}</p>
-      <ion-button (click)="toggleButton()">
+      <ion-button (click)="toggleSaved()">
         <ion-icon [name]="saved ? 'heart' : 'heart-outline'" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-card-content>
