@@ -1,0 +1,20 @@
+ion-card{
+  max-width: 300px;
+  min-width: 250px;
+  min-height: 500px;
+}
+
+.content{
+  width:60vw;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+ion-badge{
+  margin: 0 12px 0 0;
+}
+
+ion-button{
+  --background:#B0F2B4;
+  --color:#1D1D1D;
+}
