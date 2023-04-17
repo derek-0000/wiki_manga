@@ -17,12 +17,13 @@ h1{
     #container {
       text-align: center;
       height: 50vh;
-      width: 30vw;
+      width: 50vw;
       position: absolute;
-      right: 35%;
+      right: 25%;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba($color: #1d1d1d, $alpha: 1);
+      background-color: rgba($color: #1d1d1d, $alpha: .1);
+      backdrop-filter: blur(10px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,8 +36,6 @@ h1{
     }
     .main{
       z-index: -1;
-    }
-    .main::after, .main::before{
     }
     .main::after{
       backdrop-filter: blur(10px);
@@ -106,7 +105,7 @@ h1{
       --border-color:#B0F2B4;
       text-transform: none;
     }
-    .signin{
+    .login{
       --color:black;
       --background:#B0F2B4;
     }
@@ -119,13 +118,11 @@ h1{
       height: 100vh;
       width: 100vw;
       transform: rotate(-45deg);
-      // background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
-      // background: linear-gradient(90deg, hsla(154, 53%, 82%, 1) 0%, hsla(24, 88%, 65%, 1) 50%, hsla(216, 56%, 16%, 1) 100%);
-      // background-image: linear-gradient(to right, #434343 0%, black 100%);
       filter: rightness(120%) saturate(200%);
-    //   background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    //  background-blend-mode: multiply;
     }
     ion-item>*{
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
+    }
+    form{
+      width: 80%;
     }

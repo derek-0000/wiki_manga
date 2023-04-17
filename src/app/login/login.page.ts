@@ -15,11 +15,11 @@ export class LoginPage implements OnInit {
 
   constructor(private router:Router, private http:HttpClient, public form:FormBuilder) {
     this.loginForm = this.form.group({
-      'username':new FormControl("", Validators.required),//validator es para no subir sin nada 
+      'username':new FormControl("", Validators.required),
       'pass':new FormControl("", Validators.required)
     }) 
     
-   }//httpclient es para 
+   }
   async logon(){
    
     this.http.post(this.URL,this.loginForm.value).subscribe(Response=>{
@@ -30,15 +30,7 @@ export class LoginPage implements OnInit {
       }else{
         console.log("Err")
       }
-        
-      
-      //dato = this.loginForm.value  
     })
-
-  
-    
-   console.log(this.loginForm.value)
-    
   }
 
   ngOnInit() {}

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class SignupPage implements OnInit {
 
   signUpForm: FormGroup;
-  signUpSuccess = false; // for showing the success message the login page button
+  signUpSuccess = false;
   urlApi = 'http://192.168.137.212:3000/register';
 
   constructor(public formSU: FormBuilder, 
@@ -40,7 +40,7 @@ export class SignupPage implements OnInit {
       this.http.post(this.urlApi, this.signUpForm.value).subscribe((res) => {
         console.log("Connected");
         this.signUpSuccess = true;
-        this.signUpForm.reset(); // reset the form to clean it when the user is registered
+        this.signUpForm.reset();
       })
     }
   }
